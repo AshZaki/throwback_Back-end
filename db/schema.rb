@@ -17,15 +17,14 @@ ActiveRecord::Schema.define(version: 2019_02_20_182835) do
 
   create_table "accounts", force: :cascade do |t|
     t.string "auth_token"
-    t.integer "social_type_id"
+    t.string "auth_name"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "favorite_posts", force: :cascade do |t|
-    t.integer "social_id"
-    t.string "post_id"
+    t.string "account_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

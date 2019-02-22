@@ -4,8 +4,10 @@ Rails.application.routes.draw do
     	namespace :v1 do
 	      resources :users
 	      resources :accounts, :favorite_posts, :authentication
+
 	      post '/login', to: 'authentication#create'
 	      get '/profile', to: 'users#profile'
+	      post '/token', to: 'accounts#create'
     	end
   	end
 end

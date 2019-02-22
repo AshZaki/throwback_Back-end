@@ -1,3 +1,3 @@
 class FavoritePost < ApplicationRecord
-	has_one :user, throught: :account
+	belongs_to :account
 end
