@@ -19,7 +19,7 @@ class Api::V1::AccountsController < ApplicationController
 
 	private
 		def strong_params
-			params.require(:account).permit(:user_id, :auth_token, :auth_name)
+			params.require(:account).permit(:user_id, :auth_token, :auth_name, :social_id)
 		end
 
 end

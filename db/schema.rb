@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_20_182835) do
+ActiveRecord::Schema.define(version: 2019_03_03_175806) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,17 +19,31 @@ ActiveRecord::Schema.define(version: 2019_02_20_182835) do
     t.string "auth_token"
     t.string "auth_name"
     t.integer "user_id"
+    t.integer "social_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "boards", force: :cascade do |t|
+    t.string "user_id"
+    t.string "name"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "favorite_posts", force: :cascade do |t|
-    t.string "account_id"
+    t.integer "account_id"
+    t.integer "board_id"
+    t.string "created_time"
+    t.string "message"
+    t.string "full_picture"
+    t.string "place_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "social_types", force: :cascade do |t|
+  create_table "socials", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
