@@ -1,24 +1,4 @@
-# README
+# ThrowBack
+Browse your posts from various social media platforms by searching past date ranges.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Back-End Repo: https://github.com/AshZaki/throwback_Front-end
